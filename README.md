@@ -115,7 +115,8 @@ mvn spring-boot:run
 ##Author
 
 **Sarajolu Nikhil Yadav**
-[LinkedIn](www.linkedin.com/in/nikhil-yadav-sarajolu-9a3a90270) | [GitHub](https://github.com/nikhilyadavsarajolu)
+[LinkedIn](www.linkedin.com/in/nikhil-yadav-sarajolu-9a3a90270)
+[GitHub](https://github.com/nikhilyadavsarajolu)
 
 
 ---
