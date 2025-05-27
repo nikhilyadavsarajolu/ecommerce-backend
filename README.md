@@ -1,84 +1,124 @@
 # E-Commerce Backend API
 
-This is a Spring Boot-based backend for an e-commerce application. It provides a RESTful API for user authentication, product management, and cart operations with JWT-based security.
-
-## Features
-
-- User Registration & Login (JWT Auth)
-- Product CRUD (Create, Read, Update, Delete)
-- Cart Management (Add, View, Remove Products)
-- Secure password storage using BCrypt
-- MySQL database integration
+A fully functional **E-Commerce Backend** built using **Java Spring Boot**, designed to handle product management, user registration & authentication, shopping cart, and order placement functionalities with secure JWT-based access control.
 
 ## Tech Stack
 
-- Java 17
-- Spring Boot
-- Spring Security + JWT
-- Spring Data JPA + Hibernate
-- MySQL
-- Lombok
+- **Language**: Java 17
+- **Framework**: Spring Boot
+- **Database**: MySQL
+- **Authentication**: JWT (JSON Web Token)
+- **ORM**: Spring Data JPA (Hibernate)
+- **Build Tool**: Maven
+- **API Testing**: Postman
 
-## Setup Instructions
+---
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/nikhilyadavsarajolu/ecommerce-backend.git
-   cd ecommerce-backend
+## Features
 
+### User Management
+- User registration & login
+- Role-based authentication using JWT
+- Passwords encrypted using BCrypt
 
-2. Set up MySQL database
+### Product Management
+- Add, update, delete, and retrieve products
+- Accessible to authenticated users
 
-Create a database:
+### Cart Functionality
+- Add products to cart
+- View cart items
+- Remove individual items or clear entire cart
 
-CREATE DATABASE ecommerce;
+### Order Management
+- Place orders from cart
+- View order history (for authenticated user)
 
-Update your application.properties with MySQL credentials.
+---
 
+## API Endpoints
 
+### Auth
+- `POST /api/auth/register` — Register a new user
+- `POST /api/auth/login` — Login and receive JWT token
 
-3. Run the project
+### Product
+- `POST /api/products` — Add a new product
+- `GET /api/products` — Get all products
+- `PUT /api/products/{id}` — Update product details
+- `DELETE /api/products/{id}` — Delete a product
+
+### Cart
+- `POST /api/cart/add` — Add product to cart
+- `GET /api/cart` — View cart items
+- `DELETE /api/cart/remove/{itemId}` — Remove item from cart
+
+### Order
+- `POST /api/orders/place` — Place order
+- `GET /api/orders/my-orders` — View user's order history
+
+---
+
+## Getting Started
+
+### Clone the repo
+
+```bash
+git clone https://github.com/nikhilyadavsarajolu/ecommerce-backend.git
+cd ecommerce-backend
+
+Set up MySQL Database
+
+Create a database named ecommerce_db and update your credentials in application.properties.
+
+spring.datasource.username=your_mysql_username
+spring.datasource.password=your_mysql_password
+
+Run the project
 
 mvn spring-boot:run
 
 
+---
 
-API Endpoints
+Sample JSON Payloads
 
-Authentication
+Register User
 
-POST /api/auth/register
+{
+  "name": "Nikhil",
+  "email": "nikhil@example.com",
+  "password": "123456"
+}
 
-POST /api/auth/login
+Login User
+
+{
+  "email": "nikhil@example.com",
+  "password": "123456"
+}
+
+Add Product
+
+{
+  "name": "iPhone 15",
+  "description": "Latest Apple iPhone",
+  "price": 99999.0,
+  "quantity": 5
+}
 
 
-Product
-
-POST /api/products
-
-GET /api/products
-
-GET /api/products/{id}
-
-PUT /api/products/{id}
-
-DELETE /api/products/{id}
-
-
-Cart
-
-POST /api/cart/add
-
-GET /api/cart/view
-
-DELETE /api/cart/remove/{productId}
-
+---
 
 Author
 
-Nikhil Yadav
+Sarajolu Nikhil Yadav
+LinkedIn | GitHub
 
+
+---
 
 License
 
-This project is for educational purposes only.
+This project is open-source and free to use.
+    
