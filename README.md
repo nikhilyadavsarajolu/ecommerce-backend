@@ -67,23 +67,25 @@ A fully functional **E-Commerce Backend** built using **Java Spring Boot**, desi
 git clone https://github.com/nikhilyadavsarajolu/ecommerce-backend.git
 cd ecommerce-backend
 
-Set up MySQL Database
+##Set up MySQL Database
 
 Create a database named ecommerce_db and update your credentials in application.properties.
+
+##Properties
 
 spring.datasource.username=your_mysql_username
 spring.datasource.password=your_mysql_password
 
-Run the project
+##Run the project
 
 mvn spring-boot:run
 
 
 ---
 
-Sample JSON Payloads
+##Sample JSON Payloads
 
-Register User
+##Register User
 
 {
   "name": "Nikhil",
@@ -91,14 +93,14 @@ Register User
   "password": "123456"
 }
 
-Login User
+##Login User
 
 {
   "email": "nikhil@example.com",
   "password": "123456"
 }
 
-Add Product
+##Add Product
 
 {
   "name": "iPhone 15",
@@ -110,10 +112,10 @@ Add Product
 
 ---
 
-Author
+##Author
 
-Sarajolu Nikhil Yadav
-LinkedIn | GitHub
+**Sarajolu Nikhil Yadav**
+[LinkedIn](www.linkedin.com/in/nikhil-yadav-sarajolu-9a3a90270) | [GitHub](https://github.com/nikhilyadavsarajolu)
 
 
 ---
