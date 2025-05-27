@@ -112,12 +112,12 @@ mvn spring-boot:run
 
 ---
 
-##Author
+## Author
 
 **Sarajolu Nikhil Yadav**
-[![LinkedIn](https://img.shields.io/badge/Linkedln-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/nikhil-yadav-sarajolu-9a3a90270)
-[![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/nikhilyadavsarajolu)
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/nikhil-yadav-9a3a90270)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/nikhilyadavsarajolu)
 
 ---
 
