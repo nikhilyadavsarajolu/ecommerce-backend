@@ -1,127 +1,95 @@
-# E-Commerce Backend API
+# 🛒 E-Commerce Backend
 
-A fully functional **E-Commerce Backend** built using **Java Spring Boot**, designed to handle product management, user registration & authentication, shopping cart, and order placement functionalities with secure JWT-based access control.
-
-## Tech Stack
-
-- **Language**: Java 17
-- **Framework**: Spring Boot
-- **Database**: MySQL
-- **Authentication**: JWT (JSON Web Token)
-- **ORM**: Spring Data JPA (Hibernate)
-- **Build Tool**: Maven
-- **API Testing**: Postman
+A Spring Boot REST API backend for an **E-Commerce Application**, providing secure authentication, product management, cart, and order handling.  
 
 ---
 
-## Features
-
-### User Management
-- User registration & login
-- Role-based authentication using JWT
-- Passwords encrypted using BCrypt
-
-### Product Management
-- Add, update, delete, and retrieve products
-- Accessible to authenticated users
-
-### Cart Functionality
-- Add products to cart
-- View cart items
-- Remove individual items or clear entire cart
-
-### Order Management
-- Place orders from cart
-- View order history (for authenticated user)
+## 🚀 Features
+- User **Registration & Login** with JWT authentication  
+- Role-based access (Admin / User)  
+- Product Management (CRUD APIs)  
+- Cart Management  
+- Order Placement & Retrieval  
+- Input Validations & Exception Handling  
 
 ---
 
-## API Endpoints
-
-### Auth
-- `POST /api/auth/register` — Register a new user
-- `POST /api/auth/login` — Login and receive JWT token
-
-### Product
-- `POST /api/products` — Add a new product
-- `GET /api/products` — Get all products
-- `PUT /api/products/{id}` — Update product details
-- `DELETE /api/products/{id}` — Delete a product
-
-### Cart
-- `POST /api/cart/add` — Add product to cart
-- `GET /api/cart` — View cart items
-- `DELETE /api/cart/remove/{itemId}` — Remove item from cart
-
-### Order
-- `POST /api/orders/place` — Place order
-- `GET /api/orders/my-orders` — View user's order history
+## 🛠️ Tech Stack
+- **Java 17**
+- **Spring Boot 3**
+- **Spring Security (JWT Authentication)**
+- **MySQL Database**
+- **Hibernate / JPA**
+- **Maven**
 
 ---
 
-## Getting Started
+##  📂 Project Setup
 
-### Clone the repo
-
+1️⃣ Clone the repository
 ```bash
 git clone https://github.com/nikhilyadavsarajolu/ecommerce-backend.git
+
 cd ecommerce-backend
+```
+2️⃣ Configure Database
 
-##Set up MySQL Database
-
-Create a database named ecommerce_db and update your credentials in application.properties.
-
-##Properties
-
-spring.datasource.username=your_mysql_username
-spring.datasource.password=your_mysql_password
-
-##Run the project
-
+Update your application.properties with MySQL credentials:
+```bash
+spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce_db
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+3️⃣ Run the project
+```bash
 mvn spring-boot:run
+```
+---
+## 📌 API Endpoints
+🔐 Authentication
 
+- POST /api/auth/register → Register new user
+
+- POST /api/auth/login → Login & get JWT token
+
+🛍️ Products
+
+- POST /api/products/add → Add product (Admin only)
+
+- GET /api/products → List all products
+
+- GET /api/products/{id} → Get product by ID
+
+- PUT /api/products/{id} → Update product
+
+- DELETE /api/products/{id} → Delete product
+
+🛒 Cart
+
+- POST /api/cart/add → Add item to cart
+
+- GET /api/cart → View cart
+
+📦 Orders
+
+- POST /api/orders/place → Place order
+
+- GET /api/orders → Get user orders
 
 ---
+## ✅ Future Improvements
+- Payment gateway integration
 
-##Sample JSON Payloads
+- Inventory tracking
 
-##Register User
-
-{
-  "name": "Nikhil",
-  "email": "nikhil@example.com",
-  "password": "123456"
-}
-
-##Login User
-
-{
-  "email": "nikhil@example.com",
-  "password": "123456"
-}
-
-##Add Product
-
-{
-  "name": "iPhone 15",
-  "description": "Latest Apple iPhone",
-  "price": 99999.0,
-  "quantity": 5
-}
-
+- Product categories & reviews
+## 🤝 Contributing
+Pull requests are welcome!
 
 ---
-
-## Author
-
-**Sarajolu Nikhil Yadav**
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/nikhil-yadav-9a3a90270)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/nikhilyadavsarajolu)
-
----
-
-License
-
-This project is open-source and free to use.
-    
+## 👨‍💻 Author
+Sarajolu Nikhil Yadav 
+ 
+[LinkedIn](https://www.linkedin.com/in/nikhil-yadav-9a3a90270) | [GitHub](https://github.com/nikhilyadavsarajolu)
